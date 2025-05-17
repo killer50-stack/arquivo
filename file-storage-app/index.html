@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cloud Storage - Seu armazenamento de arquivos</title>
+  <link rel="stylesheet" href="public/css/styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+</head>
+<body>
+  <div class="container">
+    <header>
+      <div class="logo">
+        <i class="fas fa-cloud"></i>
+        <h1>Cloud Storage</h1>
+      </div>
+      <p class="tagline">Armazenamento seguro para seus arquivos</p>
+    </header>
+
+    <main>
+      <section class="upload-section">
+        <div class="upload-container" id="drop-area">
+          <div class="upload-content">
+            <i class="fas fa-cloud-upload-alt"></i>
+            <h2>Arraste e solte seus arquivos aqui</h2>
+            <p>ou</p>
+            <label for="file-input" class="upload-btn">Escolha um arquivo</label>
+            <input type="file" id="file-input" hidden>
+            <p class="file-info">Limite de 2GB por arquivo</p>
+          </div>
+        </div>
+        
+        <div class="upload-progress hide" id="upload-progress">
+          <div class="progress-info">
+            <span id="file-name">arquivo.jpg</span>
+            <span id="progress-percentage">0%</span>
+          </div>
+          <div class="progress-bar">
+            <div class="progress" id="progress"></div>
+          </div>
+        </div>
+      </section>
+
+      <section class="files-section">
+        <h2>Meus Arquivos</h2>
+        <div class="files-container" id="files-container">
+          <!-- Os arquivos serão carregados dinamicamente aqui -->
+          <div class="empty-files-message" id="empty-files">
+            <i class="fas fa-folder-open"></i>
+            <p>Nenhum arquivo encontrado</p>
+          </div>
+        </div>
+      </section>
+    </main>
+
+    <footer>
+      <div class="storage-info">
+        <div class="storage-bar">
+          <div class="storage-used" id="storage-used"></div>
+        </div>
+        <p><span id="used-space">0 MB</span> de 1 TB usado</p>
+      </div>
+      <p class="copyright">&copy; 2025 Cloud Storage</p>
+    </footer>
+  </div>
+
+  <div class="toast" id="toast">
+    <div class="toast-content">
+      <i class="fas fa-check-circle success-icon"></i>
+      <div class="message">
+        <span class="message-text" id="toast-message"></span>
+      </div>
+    </div>
+    <div class="close-icon" id="close-toast">
+      <i class="fas fa-times"></i>
+    </div>
+  </div>
+
+  <script src="public/js/app.js"></script>
+</body>
+</html> 
