@@ -1,0 +1,28 @@
+{
+  "name": "file-storage-app",
+  "version": "1.0.0",
+  "description": "Aplicativo moderno de armazenamento de arquivos com capacidade de 1TB",
+  "main": "server/index.js",
+  "scripts": {
+    "start": "node server/index.js",
+    "dev": "nodemon server/index.js"
+  },
+  "keywords": [
+    "storage",
+    "file-upload",
+    "cloud-storage"
+  ],
+  "author": "",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "express-fileupload": "^1.4.0",
+    "cors": "^2.8.5",
+    "dotenv": "^16.0.3",
+    "sqlite3": "^5.1.6",
+    "uuid": "^9.0.0"
+  },
+  "devDependencies": {
+    "nodemon": "^2.0.22"
+  }
+} 
